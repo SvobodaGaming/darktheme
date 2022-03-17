@@ -1,43 +1,40 @@
 // darkmodejs by svobodagaming
 
-let lightCSS = "css/light.css";  // light css destination
-let darkCSS = "css/dark.css"; // dark css destination
+const lightCSS = 'css/light.css'; // light css destination
+const darkCSS = 'css/dark.css'; // dark css destination
 
-let useSystemTheme = true; // if true, script start using system theme
-let useTime = false; // if true, disable 'useSystemtime' option
+const useSystemTheme = true; // if true, script start using system theme
+const useTime = false; // if true, disable 'useSystemtime' option
 
-if (useSystemTheme == true) {
-	let currentTheme = window.matchMedia("(prefers-color-scheme: dark)");
-	useTime = false;
-}
+const currentTheme = window.matchMedia('(prefers-color-scheme: dark)');
 
-if (useTime == true) {
-	let date = new Date();
-	let time = date.getHours();
-	let timeLimits = {
-		startLightAt: 8,
-		startDarkAt: 22
-	}
-}
+const date = new Date();
+const time = date.getHours();
+const timeLimits = {
+  startLightAt: 8,
+  startDarkAt: 22,
+};
 
-let head = Document.getElementsByTagName("head")[0];
-let link = Document.createElement("link")[0];
+const head = Document.getElementsByTagName('head')[0];
+const link = Document.createElement('link')[0];
 
 link.href = lightCSS; // default theme (for default: lightCSS)
-link.rel = "stylesheet";
+link.rel = 'stylesheet';
 
-if (useSystemTheme == true) {
-	if (currentTheme.matches) {
-		link.href = darkCSS;
-	} else {
-		link.href = lightCSS;
-	}
-} else {
-	if (useTime == true) {
-		if (timeLimits.startLightAt >= time && timeLimits.startDarkAt <= time) {
-			link.href = lightCSS;
-		} else {
-			link.href = darkCSS;
-		}
-	}
+if (useSystemTheme === true) {
+  if (currentTheme.matches) {
+    link.href = darkCSS;
+    head.appendChild(link);
+  } else {
+    link.href = lightCSS;
+    head.appendChild(link);
+  }
+} else if (useTime === true) {
+  if (timeLimits.startLightAt >= time && timeLimits.startDarkAt <= time) {
+    link.href = lightCSS;
+    head.appendChild(link);
+  } else {
+    link.href = darkCSS;
+    head.appendChild(link);
+  }
 }

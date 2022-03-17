@@ -1,7 +1,7 @@
 # darktheme
 ***use dark everywhere.***
 
-A lightweight darkmode script
+A lightweight darkmode script on JavaScript
 
 **Features**
 

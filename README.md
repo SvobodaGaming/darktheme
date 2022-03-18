@@ -7,7 +7,6 @@ A lightweight darkmode script on JavaScript
 
  - **Fast everywhere**
  - **Support System Theme**
- - **Useful**
  - **Simple to use**
 
 **Available settings**

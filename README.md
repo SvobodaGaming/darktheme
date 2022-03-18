@@ -12,13 +12,13 @@ A lightweight darkmode script on JavaScript
 
 **Available settings**
 
-1. **lightCSS** - Destination to light css version (*String*)
-2. **darkCSS** - Destination to dark css version (*String*)
-3. **useSystemTheme** - use system theme (color-scheme) to change themes (color-scheme) (*Boolean*) 
-4. **useTime** - (if useSystemTime is false) use time limits to change themes (*Boolean*)
-5. **timeLimits.startLightAt** - (less than startDarkAt) time to enable light theme (*Number*)
-6. **timeLimits.startDarkAt** - (more than startLightAt) time to enable dark theme (*Number*)
-7. **link.href** (string №22) - setup default theme (*String*)
+1. **lightCSS** ☀ - Destination to light css version (default: ***./css/light.css***) (*String*)
+2. **darkCSS** 🌚 - Destination to dark css version (default: ***./css/dark.css***)(*String*)
+3. **useSystemTheme** - use system theme (color-scheme) to change themes (color-scheme) (default ***true***) (*Boolean*) 
+4. **useTime** - (if useSystemTime is false) use time limits to change themes (default ***false***) (*Boolean*)
+5. **timeLimits.startLightAt** - (less than startDarkAt) time to enable light theme (default ***8***) (*Number*)
+6. **timeLimits.startDarkAt** - (more than startLightAt) time to enable dark theme (default ***22***)(*Number*)
+7. **dafaultTheme** - setup default theme (default ***lightCSS***) (*String*)
 
 **How to use this?**
 

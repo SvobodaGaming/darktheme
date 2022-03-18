@@ -23,13 +23,37 @@ A lightweight darkmode script on JavaScript
 
 **How to use this?**
 
-1. Clone this repo (git clone ***https://github.com/SvobodaGaming/darktheme***)
+1. Clone this repo using terminal
+
+```
+$ git clone https://github.com/SvobodaGaming/darktheme
+```
 2. Set your configuration in darktheme.js (using **Available settings**)
+```javascript
+const lightCSS = './css/light.css'; // light css destination
+const darkCSS = './css/dark.css'; // dark css destination
+
+const defaultTheme = lightCSS; // default theme (for default: lightCSS)
+
+const useSystemTheme = true; // if true, script start using system theme
+const useTime = false; // if true, disable 'useSystemtime' option
+
+const timeLimits = { // startLightAt != startDarkAt
+  startLightAt: 8, // startLightAt < startDarkAt
+  startDarkAt: 22, // startDarkAt > startLightAt
+};
+```
 3. Minify your version of file using ***https://www.digitalocean.com/community/tools/minify*** (or other) 
     
    *or use already minified file (darktheme.min.js)*
    
-5. Add darktheme.js to your project
+4. Add darktheme.js to your project
+```html
+    <div>
+        <script src="./js/darktheme.js"></script>
+    </div>
+
+```
 
 
 **Which browser support system-theme options?**

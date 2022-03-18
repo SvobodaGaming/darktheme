@@ -3,6 +3,8 @@
 const lightCSS = './css/light.css'; // light css destination
 const darkCSS = './css/dark.css'; // dark css destination
 
+const defaultTheme = lightCSS; // default theme (for default: lightCSS)
+
 const useSystemTheme = true; // if true, script start using system theme
 const useTime = false; // if true, disable 'useSystemtime' option
 
@@ -18,7 +20,7 @@ const timeLimits = { // startLightAt != startDarkAt
 const head = document.getElementsByTagName('head')[0];
 const link = document.createElement('link');
 
-link.href = lightCSS; // default theme (for default: lightCSS)
+link.href = defaultTheme;
 link.rel = 'stylesheet';
 link.type = 'text/css';
 
